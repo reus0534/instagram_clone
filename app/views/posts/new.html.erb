@@ -1,0 +1,21 @@
+<div class="container max-w-5xl pt-8 mx-auto xl:grid xl:grid-cols-[630px_320px] xl:gap-16 md:pt-12">
+  <div class="w-full mx-auto content">
+    <h2>New Post</h2>
+
+    <%= form_for(@post, url: posts_path) do |f| %>
+      <div class="field">
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+      </div>
+
+      <div class="field">
+        <%= f.label :description %><br />
+        <%= f.text_area :description %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "投稿する" %>
+      </div>
+    <% end %>
+  </div>
+</div>
